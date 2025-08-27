@@ -68,6 +68,12 @@
                     android:id="@+id/articleAvailable1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnSelect1"
+                    android:text="Select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
         </LinearLayout>
 
@@ -106,6 +112,12 @@
                     android:id="@+id/articleAvailable2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnSelect2"
+                    android:text="Select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
         </LinearLayout>
 
@@ -142,6 +154,12 @@
 
                 <TextView
                     android:id="@+id/articleAvailable3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/btnSelect3"
+                    android:text="Select"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </LinearLayout>

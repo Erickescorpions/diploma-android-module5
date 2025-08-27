@@ -16,8 +16,8 @@ class SelectArticleActivity : AppCompatActivity() {
 
     val articles: List<Article> = listOf(
         Article("Laptop", 15000.0f, 1, true, R.drawable.laptop),
-        Article("Celular", 8500.0f, 1, true, R.drawable.cellphone),
-        Article("Audífonos", 1200.0f, 2, false, R.drawable.headphones)
+        Article("Cellphone", 8500.0f, 4, true, R.drawable.cellphone),
+        Article("Headphones", 1200.0f, 2, false, R.drawable.headphones)
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

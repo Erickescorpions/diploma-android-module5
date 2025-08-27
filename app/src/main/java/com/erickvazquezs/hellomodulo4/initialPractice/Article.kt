@@ -4,5 +4,6 @@ data class Article(
     val name: String,
     val price: Float,
     val quantity: Int,
-    val available: Boolean
+    val available: Boolean,
+    val imageId: Int
 )

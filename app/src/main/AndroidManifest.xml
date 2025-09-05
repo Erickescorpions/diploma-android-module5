@@ -13,13 +13,13 @@
         android:theme="@style/Theme.HelloModulo4"
         tools:targetApi="31">
         <activity
-            android:name=".practices.relativeLayout.RelativeLayoutActivity"
+            android:name=".practices.graphicComponents.FrameLayActivity"
             android:exported="false" />
         <activity
-            android:name=".initialPractice.SelectArticleActivity"
+            android:name=".practices.graphicComponents.LinearLayoutActivity"
             android:exported="false" />
         <activity
-            android:name=".initialPractice.StartActivity"
+            android:name=".practices.compose.ComposeWelcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,6 +27,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".practices.graphicComponents.list.RecyclerViewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".practices.graphicComponents.BasicComponentsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".practices.graphicComponents.ConstraintLayoutActivity"
+            android:exported="true" />
+        <activity
+            android:name=".practices.graphicComponents.RelativeLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".initialPractice.SelectArticleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".initialPractice.StartActivity"
+            android:exported="true" />
         <activity
             android:name=".practices.explicitIntent.SecondActivity"
             android:exported="false" />

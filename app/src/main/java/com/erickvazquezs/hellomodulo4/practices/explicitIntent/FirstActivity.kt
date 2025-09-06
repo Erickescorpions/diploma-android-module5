@@ -35,6 +35,10 @@ class FirstActivity : AppCompatActivity() {
             insets
         }
 
+        // para colocar un toolbar que va a tener un back
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
+        supportActionBar?.title = "Primer Activity"
+
         val button = findViewById<Button>(R.id.btnOpen)
 
         button.setOnClickListener {

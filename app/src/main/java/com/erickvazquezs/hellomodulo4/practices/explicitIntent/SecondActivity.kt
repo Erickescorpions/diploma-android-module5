@@ -2,6 +2,7 @@ package com.erickvazquezs.hellomodulo4.practices.explicitIntent
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -20,6 +21,10 @@ class SecondActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        // para colocar un toolbar que va a tener un back
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Segundo Activity"
 
         val textView = findViewById<TextView>(R.id.textInfo)
         var infoReceived = ""
@@ -73,5 +78,16 @@ class SecondActivity : AppCompatActivity() {
             setResult(RESULT_OK, resultIntent)
             finish()
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when(item.itemId) {
+            android.R.id.home -> {
+                onBackPressedDispatcher.onBackPressed()
+            }
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 }

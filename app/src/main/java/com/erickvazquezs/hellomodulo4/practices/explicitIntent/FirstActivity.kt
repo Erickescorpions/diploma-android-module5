@@ -2,7 +2,6 @@ package com.erickvazquezs.hellomodulo4.practices.explicitIntent
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
@@ -10,8 +9,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.erickvazquezs.hellomodulo4.R
+import com.erickvazquezs.hellomodulo4.databinding.ActivityFirstBinding
 
 class FirstActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityFirstBinding
 
     private val register =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
@@ -28,7 +30,10 @@ class FirstActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_first)
+
+        binding = ActivityFirstBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -39,9 +44,7 @@ class FirstActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(false)
         supportActionBar?.title = "Primer Activity"
 
-        val button = findViewById<Button>(R.id.btnOpen)
-
-        button.setOnClickListener {
+        binding.btnOpen.setOnClickListener {
 
             val extraBundle = Bundle().apply {
                 putBoolean("EXTRA_IS_GRADUATE_KEY", false)

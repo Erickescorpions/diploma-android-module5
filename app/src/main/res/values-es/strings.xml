@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Hola Modulo 4</string>
+    <string name="animal_title">Titulo</string>
+    <string name="animal_description">Descripcion</string>
+</resources>

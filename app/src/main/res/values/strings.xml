@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HelloModulo4</string>
+    <string name="animal_title">Title</string>
+    <string name="animal_description">Description</string>
 </resources>

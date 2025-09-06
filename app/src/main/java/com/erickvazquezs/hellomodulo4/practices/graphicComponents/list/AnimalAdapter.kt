@@ -36,8 +36,8 @@ class AnimalAdapter(val list: List<AnimalEntity>): RecyclerView.Adapter<AnimalAd
         val tvDescription = view.findViewById<TextView>(R.id.animalDescription)
 
         fun render(animalEntity: AnimalEntity, onItemSelected: ((AnimalEntity) -> Unit)?) {
-            tvName.text = animalEntity.name
-            tvDescription.text = animalEntity.color
+            //tvName.text = animalEntity.name
+            //tvDescription.text = animalEntity.color
             cardAnimal.setOnClickListener {
                 onItemSelected?.invoke(animalEntity)
             }

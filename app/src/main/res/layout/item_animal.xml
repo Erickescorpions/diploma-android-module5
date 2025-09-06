@@ -23,7 +23,7 @@
                 android:id="@+id/animalImage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@mipmap/ic_launcher"
+                android:src="@drawable/ic_people"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,7 +31,8 @@
                 android:id="@+id/animalName"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Titulo"
+                android:text="@string/animal_title"
+                style="@style/BlueTextView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/animalImage"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -40,7 +41,7 @@
                 android:id="@+id/animalDescription"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Description"
+                android:text="@string/animal_description"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/animalImage"

@@ -1,5 +1,6 @@
 package com.erickvazquezs.hellomodulo4.practices.graphicComponents.list
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,7 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.erickvazquezs.hellomodulo4.R
+import com.squareup.picasso.Picasso
 
 class AnimalAdapter(val list: List<AnimalEntity>): RecyclerView.Adapter<AnimalAdapter.AnimalViewHolder>() {
     var onItemSelected: ((AnimalEntity) -> Unit)? = null
@@ -36,8 +38,18 @@ class AnimalAdapter(val list: List<AnimalEntity>): RecyclerView.Adapter<AnimalAd
         val tvDescription = view.findViewById<TextView>(R.id.animalDescription)
 
         fun render(animalEntity: AnimalEntity, onItemSelected: ((AnimalEntity) -> Unit)?) {
-            //tvName.text = animalEntity.name
-            //tvDescription.text = animalEntity.color
+            tvName.text = animalEntity.name
+            tvDescription.text = animalEntity.color
+
+            Log.d("data", animalEntity.image)
+
+            Picasso
+                .get()
+                .load(animalEntity.image)
+                .placeholder(R.drawable.img_placeholder)
+                .error(R.drawable.ic_sick)
+                .into(ivAnimal)
+
             cardAnimal.setOnClickListener {
                 onItemSelected?.invoke(animalEntity)
             }

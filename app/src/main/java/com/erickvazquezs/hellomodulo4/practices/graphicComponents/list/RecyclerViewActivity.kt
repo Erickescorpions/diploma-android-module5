@@ -24,11 +24,13 @@ class RecyclerViewActivity : AppCompatActivity() {
         val list = findViewById<RecyclerView>(R.id.list)
 
         val data = listOf(
-            AnimalEntity("Leon", "Amarillo", ""),
-            AnimalEntity("Armadillo", "Cafe", ""),
-            AnimalEntity("Tigre", "Naranja", ""),
-            AnimalEntity("Gato", "Gris", ""),
-            AnimalEntity("Tortuga", "Verde", ""),
+            AnimalEntity("León", "Amarillo", "https://images.pexels.com/photos/33729835/pexels-photo-33729835.jpeg"),
+            AnimalEntity("Armadillo", "Café", "https://images.pexels.com/photos/27785222/pexels-photo-27785222.jpeg"),
+            AnimalEntity("Tigre", "Naranja", "https://images.pexels.com/photos/792381/pexels-photo-792381.jpeg"),
+            AnimalEntity("Gato", "Gris", "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg"),
+            AnimalEntity("Tortuga", "Verde", "https://images.pexels.com/photos/1618606/pexels-photo-1618606.jpeg"),
+            AnimalEntity("Hipopotamo", "Gris", "https://images.pexels.com/photos/1131460/pexels-photo-1131460.jpeg"),
+            AnimalEntity("Delfin", "Azul", "https://images.pexels.com/photos/64219/dolphin-marine-mammals-water-sea-64219.jpeg")
         )
 
         val adapter = AnimalAdapter(data)

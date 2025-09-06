@@ -15,10 +15,17 @@
         android:theme="@style/Theme.HelloModulo4"
         tools:targetApi="31">
         <activity
-            android:name=".practices.compose.FormActivity"
-            android:exported="true" >
+            android:name=".practices.fragments.FragmentActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".practices.compose.FormActivity"
+            android:exported="true"></activity>
         <activity
             android:name=".practices.graphicComponents.FrameLayActivity"
             android:exported="false" />
@@ -30,10 +37,7 @@
             android:exported="true" />
         <activity
             android:name=".practices.graphicComponents.list.RecyclerViewActivity"
-            android:exported="true" >
-
-        </activity>
-
+            android:exported="true"></activity>
         <activity
             android:name=".practices.graphicComponents.BasicComponentsActivity"
             android:exported="true" />
@@ -54,12 +58,7 @@
             android:exported="false" />
         <activity
             android:name=".practices.explicitIntent.FirstActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="true">
         </activity>
         <activity
             android:name=".practices.implicitIntent.ImplicitIntentActivity"

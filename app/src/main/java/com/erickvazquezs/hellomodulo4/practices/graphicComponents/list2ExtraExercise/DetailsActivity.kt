@@ -1,5 +1,6 @@
 package com.erickvazquezs.hellomodulo4.practices.graphicComponents.list2ExtraExercise
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -9,6 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.erickvazquezs.hellomodulo4.R
+import com.erickvazquezs.hellomodulo4.initialPractice.SelectArticleActivity
 
 class DetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,8 +38,13 @@ class DetailsActivity : AppCompatActivity() {
 
 
         val adapter = ContactsAdapter(data)
-        adapter.onItemSelected = {
-            Toast.makeText(this, it.name, Toast.LENGTH_SHORT).show()
+        adapter.onItemSelected = { contact ->
+
+            val intent = Intent(this, ContactViewActivity::class.java).apply {
+                putExtra("EXTRA_CONTACT_KEY", contact)
+            }
+
+            startActivity(intent)
         }
 
         list.adapter = adapter
